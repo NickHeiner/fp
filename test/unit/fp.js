@@ -25,7 +25,6 @@ describe('fp', function () {
 
     }
 
-
     it('fst calls the function with the first arg passed', verifyFn(fp.fst, 0));
 
     it('snd calls the function with the second arg passed', verifyFn(fp.snd, 1));
