@@ -57,3 +57,8 @@ Wrapping console.log in fp.snd to only get the values:
    1
    2
 ````
+
+### Contributing
+
+PRs welcome. I don't have a specific direction in mind yet for this package; I just wanted someplace to stick
+the small functional tools I keep replicating between projects.
