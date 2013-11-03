@@ -18,5 +18,10 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/NickHeiner/fp/issues"
+  },
+  "devDependencies": {
+    "grunt-mocha-test": "~0.7.0",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt": "~0.4.1"
   }
 }
