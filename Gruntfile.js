@@ -46,7 +46,10 @@ module.exports = function(grunt) {
         },
 
         mochaTest: {
-            unit: ['<%= jshint.test.files.src %>']
+            unit: ['<%= jshint.test.files.src %>'],
+            options: {
+                reporter: 'spec'
+            }
         }
     });
 
