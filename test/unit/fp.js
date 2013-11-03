@@ -7,18 +7,25 @@ var chai = require('chai'),
 
 chai.use(require('sinon-chai'));
 
-describe('fp', function() {
+describe('fp', function () {
 
-    it('fst calls the function with the first arg passed', function() {
+    function verifyFn(fnToTest, argIndex) {
 
-        var spy = sinon.spy(),
-            args = ['foo', 'bar', 'baz'];
+        return function () {
 
-        fp.fst(spy).apply(null, args);
+            var spy = sinon.spy(),
+                args = ['foo', 'bar', 'baz'];
 
-        expect(spy).to.have.been.calledOnce;
-        expect(spy).to.have.been.calledWith(args[0]);
-    });
+            fnToTest(spy).apply(null, args);
+
+            expect(spy).to.have.been.calledOnce;
+            expect(spy).to.have.been.calledWith(args[argIndex]);
+        };
+
+    }
+
+
+    it('fst calls the function with the first arg passed', verifyFn(fp.fst, 0));
 
     it('snd calls the function with the second arg passed');
     it('thd calls the function with the third arg passed');
